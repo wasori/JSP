@@ -1,0 +1,9 @@
+<!-- ch09 / team.jsp -->
+<%@page import="ch09.TeamBean"%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%
+		TeamBean bean = new TeamBean();
+	
+		int num = request.getParameter("num");
+		
+%>

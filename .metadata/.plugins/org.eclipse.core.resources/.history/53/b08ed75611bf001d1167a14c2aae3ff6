@@ -1,0 +1,7 @@
+<!-- ch09 / team.jsp -->
+<%@page contentType="text/html; charset=UTF-8"%>
+<jsp:useBean id="bean" class="ch09.TeamBean"/>
+<jsp:setProperty property="*" name="bean"/>
+<h3>Team</h3>
+num: <jsp:getProperty property="num" name="bean"/><br>
+name: <jsp:getProperty property="name" name="bean"/><br>

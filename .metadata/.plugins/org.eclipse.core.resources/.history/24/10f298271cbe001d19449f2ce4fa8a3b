@@ -1,0 +1,9 @@
+package myapp2;
+
+public class MyUtil {
+	public static String getMoneyForm(String str) {
+		String result = null;
+		
+		return result;
+	}
+}

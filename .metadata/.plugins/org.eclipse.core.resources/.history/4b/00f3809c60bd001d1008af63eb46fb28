@@ -1,0 +1,11 @@
+<!-- /ch05/script.jsp -->
+<%@ page contentType="text/html; charset=UTF-8"%>
+<!-- 선언문(Declaration) -->
+<%!
+		// 필드선언
+		String dec = "선언문 변수";
+		// 메소드 선언
+		public String decMethod(){
+			return dec;
+		}
+%>
