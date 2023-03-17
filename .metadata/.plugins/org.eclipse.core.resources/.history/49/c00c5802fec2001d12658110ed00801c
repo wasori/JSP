@@ -1,0 +1,128 @@
+<!-- ch09 / teamRead.jsp -->
+<%@page import="ch09.TeamBean"%>
+<%@page import="ch09.TeamMgr"%>
+<%@page import="ch09.MyUtil"%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%
+	//teamList.jsp에서 num값을 넘겨 처리해야함
+	//int num = Integer.parseInt(request.getParameter("num"));
+	//out.print(num);
+	
+	int num = 0;
+	TeamBean bean = null;
+	if(request.getParameter("num")==null){
+		//num값이 넘어오지 않음
+		response.sendRedirect("tempList.jsp");
+		return;
+	}else if(!MyUtil.isNumeric(request.getParameter("num"))){
+		//num값이 숫자 형태로 넘어오지 않음
+		response.sendRedirect("teamList.jsp");
+		return;
+	}else{
+		num = MyUtil.parseInt(request, "num");
+		TeamMgr mgr = new TeamMgr();
+		bean = mgr.getTeam(num);
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>TeamMgr</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div align="center">
+<h1>Team Read</h1>
+<table border="1">
+	<tr>
+		<td>번호</td>
+		<td><%=bean.getNum()%></td>
+	</tr>
+	<tr>
+		<td>이름</td>
+		<td><%=bean.getName()%></td>
+	</tr>
+	<tr>
+		<td>사는곳</td>
+		<td><%=bean.getCity()%></td>
+	</tr>
+	<tr>
+		<td>나이</td>
+		<td><%=bean.getAge()%></td>
+	</tr>
+	<tr>
+		<td>팀명</td>
+		<td><%=bean.getTeam()%></td>
+	</tr>
+</table><p/>
+LIST&nbsp;&nbsp;
+INSERT&nbsp;&nbsp;
+">UPDATE&nbsp;&nbsp;
+">DELETE&nbsp;&nbsp;
+</div>
+</body>
+</html><%@page import="ch09.TeamBean"%>
+<%@page import="ch09.TeamMgr"%>
+<%@page import="ch09.MyUtil"%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%
+	//teamList.jsp에서 num값을 넘겨 처리해야함
+	//int num = Integer.parseInt(request.getParameter("num"));
+	//out.print(num);
+	
+	int num = 0;
+	TeamBean bean = null;
+	if(request.getParameter("num")==null){
+		//num값이 넘어오지 않음
+		response.sendRedirect("tempList.jsp");
+		return;
+	}else if(!MyUtil.isNumeric(request.getParameter("num"))){
+		//num값이 숫자 형태로 넘어오지 않음
+		response.sendRedirect("teamList.jsp");
+		return;
+	}else{
+		num = MyUtil.parseInt(request, "num");
+		TeamMgr mgr = new TeamMgr();
+		bean = mgr.getTeam(num);
+	}
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>TeamMgr</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div align="center">
+<h1>Team Read</h1>
+<table border="1">
+	<tr>
+		<td>번호</td>
+		<td><%=bean.getNum()%></td>
+	</tr>
+	<tr>
+		<td>이름</td>
+		<td><%=bean.getName()%></td>
+	</tr>
+	<tr>
+		<td>사는곳</td>
+		<td><%=bean.getCity()%></td>
+	</tr>
+	<tr>
+		<td>나이</td>
+		<td><%=bean.getAge()%></td>
+	</tr>
+	<tr>
+		<td>팀명</td>
+		<td><%=bean.getTeam()%></td>
+	</tr>
+</table><p/>
+LIST&nbsp;&nbsp;
+INSERT&nbsp;&nbsp;
+">UPDATE&nbsp;&nbsp;
+">DELETE&nbsp;&nbsp;
+</div>
+</body>
+</html>

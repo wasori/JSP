@@ -1,0 +1,10 @@
+package guestbook;
+
+public class JoinBean {
+	private String id;
+	private String pwd;
+	private String name;
+	private String email;
+	private String hp;
+	private String grade;
+}

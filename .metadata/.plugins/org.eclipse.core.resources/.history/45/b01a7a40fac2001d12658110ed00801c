@@ -1,0 +1,23 @@
+<!-- ch09 / teamRead.jsp -->
+<%@page import="ch09.TeamBean"%>
+<%@page import="ch09.TeamMgr"%>
+<%@page import="ch09.MyUtil"%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%
+	// teamList.jsp에서 num값을 넘겨 처리해야함
+	int num = 0;
+	TeamBean bean = null;
+	if(request.getParameter("num") == null){
+		//num값이 넘어오지 않음
+		response.sendRedirect("teamList.jsp");
+		return;
+	}else if(!MyUtil.isNumeric(request.getParameter("num"))){
+		//num값이 숫자형태로 넘어오지 않음
+		response.sendRedirect("teamList.jsp");
+		return;
+	}else{
+		num = MyUtil.parseInt(request, "num");
+		TeamMgr mgr = new TemaMgr();
+		bean = 
+	}
+%>

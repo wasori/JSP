@@ -1,9 +1,0 @@
-package ch09;
-
-public class TeamBean {
-	private int num;
-	private String name;
-	private String city;
-	private int age;
-	private String team;
-}

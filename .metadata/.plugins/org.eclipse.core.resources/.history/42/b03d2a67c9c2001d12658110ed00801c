@@ -1,0 +1,13 @@
+<!--ch09 / teamList2.jsp -->
+<%@page contentType="text/html; charset=UTF-8"%>
+<%
+	try{
+	String _driver = "com.mysql.cj.jdbc.Driver",
+	_url = "jdbc:mysql://localhost:3306/mydb2?characterEncoding=UTF-8&serverTimezone=UTC",
+	_user = "root",
+	_password = "1234";
+	Class.forName(_driver);
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+%>

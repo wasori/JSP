@@ -5,8 +5,8 @@
 <jsp:useBean id="mgr" class="ch09.TeamMgr"/>
 <%
 	Vector<TeamBean> vlist = mgr.listTeam();
-	out.println(vlist.size());
 %>
+
 
 <div align="center">
 	<h1>Team List</h1>
@@ -23,7 +23,9 @@
 				TeamBean bean = vlist.get(i);
 		%>
 			<tr align="center">
-				<td><%=bean.getNum() %></td>
+				<td>
+					<a href="teamRead.jsp?num=<%=bean.getNum()%>"><%=bean.getName() %></a>
+				</td>
 				<td><%=bean.getName() %></td>
 				<td><%=bean.getCity() %></td>
 				<td><%=bean.getAge() %></td>

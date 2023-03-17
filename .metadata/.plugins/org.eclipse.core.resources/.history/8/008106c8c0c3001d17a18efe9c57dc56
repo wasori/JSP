@@ -1,0 +1,12 @@
+package guestbook;
+
+import java.sql.Date;
+
+public class CommentBean {
+	private String id;
+	private String contents;
+	private String ip;
+	private Date regdate;
+	private Date regtime;
+	private String secret;
+}
